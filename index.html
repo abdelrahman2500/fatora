@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>فاتورة</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="./css/style.css">
+        
+    </head>
+    <body>
+        <div class="container" >
+            <div class="row">
+                <form action="">
+                    <label for="">المطلوب من السيد : </label>
+                    <input class="name" type="text">
+                    <label for="">العنوان : </label>
+                    <input class="address" type="text">
+                    <!-- <label for="">التاريخ : </label> -->
+                    <div class="values">
+                        <label for="">اليوم : </label>
+                        <label for="">الشهر : </label>
+                        <label for="">السنة : </label>
+                        <input class="day" type="number">
+                        <input class="month" type="number">
+                        <input class="year" type="number">
+                    </div>
+                    <label for="">التسجيل الضريـبـى : </label>
+                    <div class="values">
+                        <input class="record1 re" type="number">
+                        <input class="record2 re" type="number">
+                        <input class="record3 re" type="number">
+                    </div>
+                    
+                    <label for="">رقم الفاتورة : </label>
+                    <input class="bill-number" type="number">
+                    <label for="">البيان : </label>
+                    <input class="details" type="text">
+                    <label for="">الكمية بالكيلوجرام : </label>
+                    <input class="kg-quantity" type="number">
+                    <label for="">سعر الكيلو بالجنيه بالجنيه : </label>
+                    <input class="kg-price" type="number">
+                    <label for="">الاجمالى : </label>
+                    <input disabled type = "number" id = "txt"  class="arabic" max = "99999999999999" step="any" />
+
+                    <div id="print">PRINT</div>
+
+                </form>
+                <div class="application" id="app">
+                    <div class="row">
+                        <div class="factory-name text-center">
+                            <h2>Factory name</h2>
+                            <p class="factory-desc">
+                                For loream
+                                <br> Address
+                            </p>
+                            <!-- <p id="date"></p> -->
+                        </div>
+                        <div class="factory-number text-center">
+                            <p>
+                                رقم التسجيل فى ضريبة القيمة المضافة
+                                <br> 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="person-data">
+                            <p class="person"> المطلوب من السيد : <span class="person-name"></span></p>
+                            <p class="person"> العنوان : <span class="person-address"></span> 
+                        </div>
+                        <div class="person-data-desc">
+                            <p class="person"> تحريرا فى : 
+                                <span class="bill-date">
+                                    <span class="one"></span> /
+                                    <span class="two"></span> /
+                                    <span class="three"></span>
+                                </span> 
+                            </p>
+                            <p class="person"> التسجيل الضريبى : 
+                                <span class="person-record">
+                                    <span class="one"></span> -
+                                    <span class="two"></span> -
+                                    <span class="three"></span>
+                                </span> 
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div class="bill">
+                        <div class="text-center">رقم الفاتورة (<span id="bill-number"></span>)</div>
+                        <br>
+                        <table>
+                            <tr>
+                                <th>المبلغ بالجنيه</th>
+                                <th>سعر الكيلو بالجنيه</th>
+                                <th>الكمية بالكيلوجرام</th>
+                                <th>البيان</th>
+                            </tr>
+                            <tr>
+                                <td class="price-by-le"></td>
+                                <td class="kg-price"></td>
+                                <td class="kg-quantity"></td>
+                                <td class="details"></td>
+                            </tr>
+                            <tr>
+                                <td class="add-value"></td>
+                                <td colspan="2"></td>
+                                <td>القيمة المضافة (١٤%)</td>
+                            </tr>
+                            <tr>
+                                <td class="all-price"></td>
+                                <td colspan="3" class="arabic"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="end">
+                        <div class="row">
+                            <div class="right">
+                                <p>
+                                    الحسابات <br> التاريخ :  
+                                    <span class="bill-date1">
+                                        <span class="one"></span> /
+                                        <span class="two"></span> /
+                                        <span class="three"></span>
+                                    </span>  <br>مستلم الفاتورة :
+                                </p>
+                            </div>
+                            <div class="left">
+                                <p>مدير المصنع :</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="google_translate_element"></div> -->
+
+        <script src="./js/Tafqeet.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
